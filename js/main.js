@@ -1,4 +1,8 @@
-var module = angular.module('acmWebsite', ['ngRoute']);
+var module = angular.module('acmWebsite', ['ngRoute', ]);
+/* 
+ * TODO: Add ui.bootstrap
+ * For some reason I can't use ui.bootstrap combined with ngRoute - Brian 07/14/2016
+ */
 /**
  *  Routes
  */
@@ -29,12 +33,8 @@ module.config(['$routeProvider', function ($routeProvider) {
             , controller: "PageCtrl"
         });
 }]);
-module.controller('PageCtrl', function ( /* $scope, $location, $http */ ) {
+module.controller('PageCtrl', function ( /*$scope, $location, $http */ ) {
     console.log("Page Controller reporting for duty.");
-    // Activates the Carousel
-    $('.carousel').carousel({
-        interval: 5000
-    });
     // Activates Tooltips for Social Links
     $('.tooltip-social').tooltip({
         selector: "a[data-toggle=tooltip]"
