@@ -36,7 +36,4 @@ module.config(['$routeProvider', function ($routeProvider) {
 module.controller('PageCtrl', function ( /*$scope, $location, $http */ ) {
     console.log("Page Controller reporting for duty.");
     // Activates Tooltips for Social Links
-    $('.tooltip-social').tooltip({
-        selector: "a[data-toggle=tooltip]"
-    })
 });
